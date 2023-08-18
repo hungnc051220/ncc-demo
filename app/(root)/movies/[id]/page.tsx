@@ -2,20 +2,17 @@ import Image from "next/image";
 import imdb from "@/images/imdb.svg";
 import Container from "@/components/container";
 import TicketTimes from "@/components/ticket-times";
-import prismadb from '@/lib/prismadb';
+import prismadb from "@/lib/prismadb";
+import movies from "@/movies.json";
 
 interface MovieDetailProps {
   params: {
-    id: string
-  }
+    id: string;
+  };
 }
 
-const MovieDetail: React.FC<MovieDetailProps> = async ({params}) => {
-  const movie = await prismadb.movie.findUnique({
-    where: {
-      id: params.id,
-    },
-  });
+const MovieDetail: React.FC<MovieDetailProps> = async ({ params }) => {
+  const movie = movies.find((item) => item.id === params.id);
 
   return (
     <div className="pt-20">
@@ -71,54 +68,54 @@ const MovieDetail: React.FC<MovieDetailProps> = async ({params}) => {
         <Container>
           <div className="flex h-[91px] justify-center">
             <div className="bg-red-600 w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
             <div className="w-[72px] flex flex-col items-center justify-center text-xs">
-                <p>Th.6</p>
-                <p className="text-xl font-bold">12</p>
-                <p>H.nay</p>
+              <p>Th.6</p>
+              <p className="text-xl font-bold">12</p>
+              <p>H.nay</p>
             </div>
           </div>
         </Container>
