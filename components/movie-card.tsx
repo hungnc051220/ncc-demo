@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { Movie } from "@/types";
 
 interface MovieCardProps {
-  movie: Movie;
+  movie: any;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
